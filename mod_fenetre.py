@@ -1,4 +1,6 @@
-#on l'appelle module fenêtre (pour créer la fenêtre)
+#Avec l'aide du professeur Georges Debay
+
+#On l'appelle module fenêtre (pour créer la fenêtre)
 
 import tkinter as tk
 from tkinter import * # va chercher toutes les fonctionalités
@@ -15,13 +17,13 @@ def calculer():
     _nom = nom.get()
     _age = age.get() #incenser 4 var de type bmi qu'on a crée tantôt donc importer module
     unpatient = Bmi(nom = _nom, age = age, poids = _poids, taille = taille)
-    #le résultat: formule:
+    #le résultat, formule:
     txt_imc = calcul_imc(unpatient) #le voit pas, faut l'importer
     messagebox.showinfo("Résultat", message = "{0:5.3F}".format(txt_imc))
     #importer message box
     #mettre 3 chiffres après la décimale
 
-#créer var appellé root de type tk
+#créer var appellée root de type tk
 root=Tk()
 root.title("Calcul de l'indice de masse corporelle")
 root.geometry("680x400")
